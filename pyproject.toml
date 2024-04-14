@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "habitua"
+version = "0.1.0"
+description = ""
+authors = ["Kartikey Subramanium <kartikey@tutanota.com>"]
+license = "GPL version 3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^3.0.3"
+flask-sqlalchemy = "^3.1.1"
+flask-htmx = "^0.3.2"
+flask-cors = "^4.0.0"
+flask-login = "^0.6.3"
+flask-migrate = "^4.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
