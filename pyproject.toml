@@ -14,6 +14,7 @@ flask-htmx = "^0.3.2"
 flask-cors = "^4.0.0"
 flask-login = "^0.6.3"
 flask-migrate = "^4.0.7"
+flask-bcrypt = "^1.0.1"
 
 
 [build-system]
