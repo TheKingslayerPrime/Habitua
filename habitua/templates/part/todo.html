@@ -1,0 +1,18 @@
+<div class="rcard" id="striped" class="rcard">
+  <div class="rincard">
+    <header class="rcard-header">
+      <div class="rvisiable">
+        <p class="rtitle">
+          {% if habit.is_positive %} ✅ {% else %} ❎ {% endif %}
+          {{ habit.title }}
+        </p>
+        <label class="rcheckbox">
+          <input type="checkbox" class="rtickbox">
+        </label>
+      </div>
+        <div style="display: block;">
+        <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+      </div>
+    </header>
+  </div>
+</div>

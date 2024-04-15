@@ -33,3 +33,4 @@ def create_app():
 
     return app
 
+from .models import *

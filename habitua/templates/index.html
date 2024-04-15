@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habitua - Build good habits!</title>
+  <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+<div class="rnavbar">
+    <p id="webpage">HABITUA</p>
+    <p id="sign">Sign Out</p>
+    <p id="coin">🪙 {{ user.coins }}</p>
+</div>
+
+<br>
+
+<section class="section">
+
+{% include 'part/add_habit.html' %}
+
+{% with habits = habits %}
+  {% include 'part/habits.html' %}
+{% endwith %}
+
+{% with user = user, kitten = kitten, food = food, toys = toys %}
+  {% include 'part/kitten.html' %}
+{% endwith %}
+
+</section>
+</body>
+</html>

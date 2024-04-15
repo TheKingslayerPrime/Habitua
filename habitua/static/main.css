@@ -1,0 +1,182 @@
+body
+{
+    margin: 0px;
+    background-image: url(img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 8px;
+}
+.rcard
+{
+    border: 1rem;
+    margin: 2rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: white;
+    width: 101rem;   
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease-in-out;
+}
+.rtickbox
+{
+    height: 3rem;
+    width: 3rem;
+    margin: 1.5rem;
+}
+.rtitle
+{
+    font-size: larger;
+}
+.rincard
+{
+    margin: 10px;
+}
+.ricon{
+    text-align: justify;
+    display: flex;
+}
+.rtextarea
+{
+    align-items: center;
+    width: 85%;
+    resize: none;
+}
+.rvisiable
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rquantity
+{
+    height: 3rem;
+    width: 3rem; 
+    margin: 1.5rem;
+    font-size: 2rem;
+}
+#striped 
+{
+    position: relative;
+    width: auto;  
+    background: linear-gradient(to left, #ffffff 0%, #ffffff 2%, #51e69e 2%, #51e69e 12%, #ffffff 12%)
+    
+}
+.rcard:hover 
+{
+    transform: scale(1.05); 
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1); 
+}
+
+.rnavbar
+{
+    background-color: aliceblue;
+    height: 3rem;
+    margin: 0px;
+}
+.rmain_cards
+{
+    width: 60%;
+    height: 100%;
+    border: black;
+    border-radius: 1px;
+    border-style: solid;
+    margin: 0px;
+    overflow-y: scroll;
+}
+.rpart
+{
+    background-color: #ffffff;
+    width: 70%;
+    display: flex;
+    position: fixed;
+    bottom: 1rem;
+    height: 25rem;
+}
+#webpage
+{
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+    margin: 0px;
+}
+#sign
+{
+    margin: 0px;
+    text-align: right;
+    font-size: larger;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-right: 10px;
+    font-weight: bold;
+    float: right;
+}
+#coin
+{
+    margin: 0px;
+    text-align: center;
+    font-size: larger;
+    font-size: 30px;
+    padding-right: 10px;
+    font-weight: bold; 
+}
+.rcontainer 
+{
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    height: 25rem;
+}
+
+#heading
+{
+    text-align: center;
+    color: #333;
+    width: auto;
+    font-size: 3rem;
+}
+
+#addingnewtask{
+    margin-top: 20px;
+    width: auto;
+}
+#title{
+    width:auto;
+}
+
+label 
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: auto;
+}
+
+
+#dropdown{
+    width: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#addtask {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+}
+
+#addtask:hover {
+    background-color: #45a049;
+}

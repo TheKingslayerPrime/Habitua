@@ -1,0 +1,15 @@
+<div class="rpart" id="all_habits">
+  <div class="rmain_cards" id="div1">
+    {% for habit in habits %}
+      {% if habit.is_countable %}
+        {% with habit = habit %}
+          {% include 'part/count.html' %}
+        {% endwith %}
+      {% else %}
+        {% with habit = habit %}
+          {% include 'part/todo.html' %}
+        {% endwith %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
