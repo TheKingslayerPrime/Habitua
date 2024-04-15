@@ -37,6 +37,9 @@ class Habit(db.Model):
     is_positive: Mapped[bool] = mapped_column(nullable=False, default=True)
     is_countable: Mapped[bool] = mapped_column(nullable=False, default=False)
 
+    value: Mapped[int] = mapped_column(nullable=False, default=0)
+    highlight: Mapped[str] = mapped_column(nullable=True)
+
 
 class Highlight(db.Model):
     id: Mapped[int] = mapped_column(primary_key=True)
