@@ -72,4 +72,15 @@ Commands:
     c. Linux-
         i. Same steps as macOS.
 
+## Usage
+1. the user will first sign up to the website where his details will be saved to a secure database. 
+2. upon signing up, login using the same credentials will be required. 
+3. upon successful login, the dashboard will open with a variety of services to offer. 
+4. the user can set new tasks for themselves using the New Task option and can even set new habits to integrate into themselves using the New Habits option. 
+5. a pomodoro clock displaying 25mins of focus period followed by 5 mins of break is also available for the user to focus on chosen task. 
+6. a reward system is put in place where upon completion of a task, certain number of coins will be accredited to the user which can then be spent to feed the pet cat of the user or buy them toys. 
+7. each material has their own parameters which will affect the health and happiness of the cat. 
+8. on the other side, not completing tasks or doing a negative habit will decrease the health and happiness of the cat, thus guilt tripping the user into working hard to better themselves. 
+9. users can logout from the page using the sign out option. 
+
 
