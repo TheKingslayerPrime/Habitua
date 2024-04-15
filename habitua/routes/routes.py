@@ -19,8 +19,6 @@ def index():
 
 @bp.route('/create_habit', methods=['POST'])
 def create_habit():
-    print(request.form)
-
     if not htmx:
         return "Forbidden", 403
 
@@ -52,3 +50,38 @@ def create_habit():
 
     return render_template('part/habits.html', habits=habits)
 
+@bp.route('/check_todo/<int:id>', methods=['POST'])
+def check_todo(id):
+    if not htmx:
+        return "Forbidden", 403
+
+    habit = Habit.query.filter_by(id=id).first()
+    habit.value = not habit.value
+
+    user = User.query.filter_by(id=habit.user_id).first()
+
+    if habit.is_positive:
+        if habit.value:
+            user.coins += 250
+        else:
+            user.coins -= 250
+    else:
+        if habit.value:
+            user.coins -= 250
+        else:
+            user.coins += 250
+
+    db.session.add(habit)
+    db.session.add(user)
+    db.session.commit()
+
+    return render_template('part/todo.html', habit=habit)
+
+@bp.route('/get_coins')
+def get_coins():
+    if not htmx:
+        return "Forbidden", 403
+
+    user = User.query.first()
+
+    return "🪙 " + str(user.coins)

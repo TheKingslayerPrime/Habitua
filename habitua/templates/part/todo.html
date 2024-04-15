@@ -1,4 +1,4 @@
-<div class="rcard" id="striped" class="rcard">
+<div class="rcard rstriped" id="{{ 'striped' + habit.id|string }}">
   <div class="rincard">
     <header class="rcard-header">
       <div class="rvisiable">
@@ -7,11 +7,22 @@
           {{ habit.title }}
         </p>
         <label class="rcheckbox">
-          <input type="checkbox" class="rtickbox">
+          <form method="POST">
+            <input type="checkbox"
+                   class="rtickbox"
+                   hx-post="{{ url_for('routes.check_todo', id=habit.id) }}"
+                   hx-target="{{ '#striped' + habit.id|string }}"
+                   hx-swap="outerHTML"
+                   {% if habit.value %} checked {% endif %}>
+          </form>
         </label>
       </div>
-        <div style="display: block;">
-        <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+      <div style="display: block;">
+        {% if habit.value %}
+          <textarea class="rtextarea" placeholder="Highlights"></textarea>
+        {% else %}
+          <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+        {% endif %}
       </div>
     </header>
   </div>

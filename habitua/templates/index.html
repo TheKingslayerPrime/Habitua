@@ -7,19 +7,40 @@
   <script src="https://unpkg.com/htmx.org@1.9.11"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <script src="{{ url_for('static', filename='pomodoro.js') }}" defer></script>
 </head>
 <body>
 <div class="rnavbar">
     <p id="webpage">HABITUA</p>
-    <p id="sign">Sign Out</p>
-    <p id="coin">🪙 {{ user.coins }}</p>
+    <p id="coin"
+       hx-trigger="every 1s"
+       hx-get="{{ url_for('routes.get_coins') }}">🪙 {{ user.coins }}</p>
 </div>
 
 <br>
 
-<section class="section">
-
 {% include 'part/add_habit.html' %}
+
+<div class="rclock">
+  <div class="rtimer">
+    <div class="rwrapper">
+      <div style=" position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div style="position: relative; display: flex; justify-content: center; align-items: center;">
+          <div id="middle-circle"></div>
+          <div id="progress-spinner"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rbutton-wrapper">
+      <div class = "rtitle-wrapper">
+        <h1> Timer </h1>
+      </div>     
+      <button class="btn outline" ; id = "startbtn" > START </button>
+      <button class="btn fill"; id = "stopbtn"> RESET </button>
+    </div>
+  </div>
+</div>
 
 {% with habits = habits %}
   {% include 'part/habits.html' %}
@@ -29,6 +50,5 @@
   {% include 'part/kitten.html' %}
 {% endwith %}
 
-</section>
 </body>
 </html>

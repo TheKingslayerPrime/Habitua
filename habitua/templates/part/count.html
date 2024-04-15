@@ -1,4 +1,4 @@
-<div class="rcard" id="striped" class="rcard">
+<div class="rcard rstriped" id="{{ 'striped' + habit.id|string }}">
   <div class="rincard">
     <header class="rcard-header">
       <div class="rvisiable">
@@ -12,7 +12,11 @@
       </div>
 
       <div style="display: block;">
-        <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+        {% if habit.value %}
+          <textarea class="rtextarea" placeholder="Highlights"></textarea>
+        {% else %}
+          <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+        {% endif %}
       </div>
     </header>
   </div>

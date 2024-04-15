@@ -1,24 +1,29 @@
-<div class="rcontainer">
+<div class="rcontainer2">
   <h1 id="heading">New Habit</h1>
+
   <form id="addingnewtask">
     <label for="title" align="center">Name</label>
-    <input type="text" id="title" name="title"><br>
-    
+    <input type="text" id="title" name="title" align="center" style="width: 100%; height: 2rem;">
+
+    <br>
     <br>
     
     <label for="type" align="center">Type</label>
-    <select id="dropdown" name="type" id="type">
+    <select id="dropdown" name="type" id="type" style="width: 100%;">
       <option value="1">Do's</option>
       <option value="2">Don'ts</option>
       <option value="3">At-least</option>
       <option value="4">At-most</option>
     </select>
 
+    <br>
+    <br>
+
     <submit value="add task"
             id="addtask"
             hx-post="{{ url_for('routes.create_habit') }}"
             hx-target="#all_habits">
-      Add Task
+      Add Habit
     </submit>
   </form>
 </div>
