@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images and Videos</title>
+    <link rel="stylesheet" href="css file.css">
+    <script src="pomodoro.js" defer></script>
+    
+</head>
+
+<body>
+    <div class="rmainmain">
+        <div class="rnavbar">
+            <p id="webpage">HABITUA</p>
+            <p id="sign">Sign Out</p>
+            <p id="coin">🪙 99999</p>
+        </div>
+        <br>
+        <div class="rmain">
+            <div class="rcontainer">
+                <h1 id="heading">New Habit</h1>
+                <form id="addingnewtask">
+                    <label for="title" align="center">Name</label>
+                    <br>
+                    <input type="text" id="title" name="title"><br>
+                    <br>
+                    <label for="type" align="center">Type</label>
+                    <br>
+                    <select id="dropdown" name="type" id="type">
+                        <option value="1">Do's</option>
+                        <option value="2">Don'ts</option>
+                        <option value="3">At-least</option>
+                        <option value="4">At-most</option>
+                    </select>
+                </form>
+                <div align="center">
+                    <button value="add task" id="addtask">Add Habit</button>
+                </div>
+            </div>
+
+            <div class="rcontainer2">
+                <h1 id="heading1">New Task</h1>
+                <form id="addingnewtask1">
+                    <label for="title" align="center">Title</label>
+                    <br>
+                    <input type="text" id="title1" name="title"><br>
+                    <br>
+                    <label for="type" align="center">Type</label>
+                    <br>
+                    <select id="dropdown1" name="type" id="type1">
+                        <option value="1">Do's</option>
+                        <option value="2">Don'ts</option>
+                        <option value="3">At-least</option>
+                        <option value="4">At-most</option>
+                    </select>
+                </form>
+                <div align="center">
+                    <button value="add task" id="addtask">Add Task</button>
+                </div>
+            </div>
+            
+            <div class="rclock">
+                <div class="rtimer">
+                    <div class="rwrapper">
+                        <div style=" position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                            <div style="position: relative; display: flex; justify-content: center; align-items: center;">
+                                <div id="middle-circle"></div>
+                                <div id="progress-spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rbutton-wrapper">
+                        <div class = "rtitle-wrapper">
+                            <h1> Timer </h1>
+                        </div>     
+                        <button class="btn outline" ; id = "startbtn" > START </button>
+                        <button class="btn fill"; id = "stopbtn"> RESET </button>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div class="rpart">
+                <div class="rmain_cards" id="div1">
+                    <div class="rcard" id="striped" class="rcard">
+                        <div class="rincard">
+                            <header class="rcard-header">
+                                <div class="rvisiable">
+                                    <p class="rtitle"> ❌ Card header</p>
+                                    <label class="rcheckbox">
+                                        <input type="checkbox" class="rtickbox">
+                                    </label>
+                                </div>
+                                    <div style="display: block;">
+                                    <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="rcard" id="striped" class="rcard">
+                        <div class="rincard">
+                            <header class="rcard-header">
+                                <div class="rvisiable">
+                                    <p class="rtitle"> ❌ Card header</p>
+                                    <label class="rcheckbox">
+                                        <input type="checkbox" class="rtickbox">
+                                    </label>
+                                </div>
+                                    <div style="display: block;">
+                                    <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="rcard" id="striped" class="rcard">
+                        <div class="rincard">
+                            <header class="rcard-header">
+                                <div class="rvisiable">
+                                    <p class="rtitle">✔ Card header</p>
+                                    <label class="rnumber">
+                                        <input type="number" class="rquantity" name="quantity" min="0" placeholder="0">  
+                                    </label>
+                                </div>
+
+                                <div style="display: block;">
+
+                                    <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+
+                                </div>
+                            </header>
+                        </div>
+                    </div>   
+                </div>  
+
+                <div class="rmain_cards" id="">
+                    <div class="rcard" id="striped" class="rcard">
+                        <div class="rincard">
+                            <header class="rcard-header">
+                                <div class="rvisiable">
+                                    <p class="rtitle"> ❌ Card header</p>
+                                    <label class="rcheckbox">
+                                        <input type="checkbox" class="rtickbox">
+                                    </label>
+                                </div>
+                                    <div style="display: block;">
+                                    <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="rcard" id="striped" class="rcard">
+                        <div class="rincard">
+                            <header class="rcard-header">
+                                <div class="rvisiable">
+                                    <p class="rtitle">✔ Card header</p>
+                                    <label class="rnumber">
+                                        <input type="number" class="rquantity" name="quantity" min="0" placeholder="0">  
+                                    </label>
+                                </div>
+
+                                <div style="display: block;">
+
+                                    <textarea class="rtextarea" placeholder="Highlights" disabled></textarea>
+
+                                </div>
+                            /header>
+                        </div>
+                    </div>   
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
